@@ -2,7 +2,8 @@
 
 :root {
     --primary-color: #F9A826;
-    --off-white: #1E2022;
+    --off-white: #F2F2F2
+;
     --dark-gray: #6B7280;
 }
 
@@ -140,7 +141,6 @@ hr {
 }
 
 
-
 /** sections **/
 
 .section {
@@ -199,3 +199,15 @@ hr {
 .padding {
     padding: 1rem 0rem 2rem 0rem;
 }
+.blog-header {
+    padding-bottom: 3rem;
+    
+}
+
+.blog-img {
+    max-width: 100%;
+    max-height: 1%;
+    display: block;
+    margin: auto;
+}
+
