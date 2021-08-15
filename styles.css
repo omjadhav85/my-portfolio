@@ -2,8 +2,7 @@
 
 :root {
     --primary-color: #F9A826;
-    --off-white: #F2F2F2
-;
+    --off-white: #F2F2F2;
     --dark-gray: #6B7280;
 }
 
@@ -18,9 +17,9 @@ body {
     color: white;
 }
 
-hr {
+/* hr {
     margin: 2rem 0rem;
-}
+} */
 
 /** spaces **/
 
@@ -164,7 +163,7 @@ hr {
 
 .footer {
     background-color: var(--primary-color);
-    padding: 2rem 1rem;
+    padding: 2rem 0;
     text-align: center;
     color: white;
     border-top-right-radius: 1rem;
