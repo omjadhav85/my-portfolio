@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/blogs/styles.css" rel="stylesheet" />
+    <title>Binary Search | Omkar Jadhav</title>
+  </head>
+
+  <body class="body-font">
+    <header class="blog-header">
+      <img class="blog-img" src="/blogs/images/binary_search.jpg" />
+    </header>
+    <div class="container container-center">
+      <h1 class="blog-heading">Binary Search</h1>
+
+      <p class="blog-content">
+        Searching is a very important concept in programming world. Especially
+        when the data volumes are increasing exponentially every day. Naive
+        searching methods won't work for us with such large volumes of
+        data...unless you are ok with your next generations to get the answer
+        for your find query :p. There are many advanced methods to tacle this
+        exact issue. But today we will learn one of the most famous concept in
+        searching algorithms - "Binary Search"
+      </p>
+
+      <p class="blog-content">
+        Binary search uses the power of division along with sorting. In this, we
+        only compare the middle element with the required element. If its the
+        element we need, we are done. If it is not, we check whether that
+        element is lesser or greater than the required element. Which makes
+        sense, if the middle number is lesser than required element, all the
+        elements before it would also be lesser. Hence we skip half of the
+        elements and thus save a lot of comparisons. Keep doing this recursively
+        until you reach the element. The power of division makes the time
+        complexity of binary search algorithm to
+        <strong>O(log₂(n))</strong> which is wayyyy better than the complexity
+        of a linear search alogithm i.e. <strong>O(n)</strong>
+      </p>
+      <p class="blog-content">
+        Lets take an example. Suppose we have a sorted list of numbers like
+        below:
+      </p>
+      <pre>
+        <code class="code-background">
+        listOfItems = [12,34,65,90,100,120,140]
+        </code>
+    </pre>
+      <p class="blog-content">
+        Now we want to find the position of element 120 if its present. If we
+        follow the linear way it would take us 6 comparisons in totals to get to
+        element 120.
+      </p>
+      <p class="blog-content">
+        But in binary search, we will only compare the middle element. Here the
+        middle element is 65 (7/2 = 3.5). As 65 is not the required element and
+        also lesser than the 120 we will skip all the elements before it and
+        only search in the right side elements for 120. Now our list consists of
+        90,100,120 and 140.
+      </p>
+      <p class="blog-content">
+        We do the same thing again by comparing with only the middle element.
+        Now our middle element is 100 (4/2 = 2). As it is again lesser than 120
+        we search only the right side elements. Now our list consists of 120 and
+        140. Now the middle element is 120 (2/2 = 1). As 120 is the required
+        element, we are done. You can see that it only took 3 comparisons in
+        total to find the element.
+      </p>
+      <p class="blog-content">
+        As this example was for a very short list of items, the comparisons
+        count difference wouldn't seem very large. But when we have millions and
+        millions of data, this would save us a great deal of time.
+      </p>
+      <p class="blog-content">
+        Below is the program for using binary search in python:
+      </p>
+      <pre>
+        <code class="code-background">
+
+        def binary_search(arr, x):
+            start = 0
+            end = len(arr) - 1
+            mid = 0
+        
+            while start <= end:
+        
+                mid = (start + end) // 2
+                
+                # Found the element
+                if(arr[mid] == x):
+                    return mid
+                # If x is greater, skip left half by changing left to mid+1
+                elif arr[mid] < x:
+                    low = mid + 1
+        
+                # If x is smaller, skip right half by changing right to mid-1
+                elif arr[mid] > x:
+                    high = mid - 1
+        
+        
+        
+            # If element is not found, return -1
+            return -1
+        
+        
+        
+        arr = [ 2, 3, 4, 10, 40 ]
+        x = 10
+        
+        # Function call
+        result = binary_search(arr, x)
+        
+        if result != -1:
+            print("Element is present at index", str(result))
+        else:
+            print("Element is not present in array")
+        
+        </code>
+    </pre>
+    </div>
+  </body>
+</html>

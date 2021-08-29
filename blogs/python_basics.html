@@ -72,6 +72,104 @@
                 </code>
             </pre>
         </p>
+        <h2 class="blog-subheading">Functions in python:</h2>
+        <p>
+            Functions are defined in python using "def" keyword. They can be created anywhere you want and can be called anywhere you like. Comfortable, isn't it?
+        </p>
+        <pre>
+            <code class="code-background">
+            def myFunction():
+                print("inside function")
+            
+            myfunction()
+            </code>
+        </pre>
+        Running above code will give you below output:
+        <pre>
+            <code class="code-background">
+        inside function
+            </code>
+        </pre>
+
+        <p>
+            You can also pass arguments in a function. These passed arguments can be used in the function whenever needed. Here is an example:
+        </p>
+        <pre>
+            <code class="code-background">
+        def myFunction(firstName, lastName):
+            print(firstName)
+            print(lastName)
+            
+        myfunction("omkar","jadhav")
+            </code>
+        </pre>
+        Running above code will give you below output:
+        <pre>
+            <code class="code-background">
+        omkar
+        jadhav
+            </code>
+        </pre> 
+        <p>
+            <strong>Note: </strong>Indentations are very important in Python. They let Python know which part of code belongs to which area. You also have to be careful with use of spaces and tabs sometimes. Jumbling them up can cuase you a nightmare while debugging. 
+        </p>
+
+        <h2>Lists in Python:</h2>
+        <p>Lists are very useful in python and you will be using them a lot while solving problems. It is equivalent to arrays in other languages.But not exactly! There is another datastucture especially for Arrays in python as well...but for now lets not worry about it.</p>
+        <p>Lists can contain any type of data you want in it. It need not be of one type only. You can include an integer, string or any other object in a list. Here is an example of defining a list:</p>
+
+        <pre>
+            <code class="code-background">
+        listOfThings = ["water",10,12.92,True]
+        print(listOfThings)
+            </code>
+        </pre> 
+        Running above code will give you below output:
+        <pre>
+            <code class="code-background">
+        ['water', 10, 12.92, True]
+            </code>
+        </pre> 
+
+        <h2>Append in lists: </h2>
+        <p>To add elements in a list we use .append() method. It takes an input and adds it at the end of the list</p>
+        
+        <pre>
+            <code class="code-background">
+        listOfThings = ["water",10,12.92,True]
+        
+        listOfThings.append("fire")
+        print(listOfThings)
+            </code>
+        </pre> 
+        Running above code will give you below output:
+        <pre>
+            <code class="code-background">
+        ['water', 10, 12.92, True, 'fire']
+            </code>
+        </pre>
+        <h2>Pop elements from lists: </h2>
+        <p>You can also remove an element present at a position from the list using pop() function. It takes the index of the element you want to remove from the list. By default it removes the last element from the list.</p>
+
+        <pre>
+            <code class="code-background">
+        listOfThings = [12,14,16,18]
+        
+        listOfThings.pop()
+        print(listOfThings)
+
+        listOfThings.pop(2)
+        print(listOfThings)
+            </code>
+        </pre> 
+        Running above code will give you below output:
+        <pre>
+            <code class="code-background">
+        [12, 14, 16]
+        [12, 14]
+            </code>
+        </pre>
+        <p>You can refer <a href="https://www.w3schools.com/python/python_lists_methods.asp">this</a> link for more operations you can perform on a list.</p>
     </div>
 </body>
 
