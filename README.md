@@ -1,2 +1,1 @@
-Hi all! This is a readme file for desc of the portfolio project
-Changed
+Hi all! This is my portfolio which includes all the projects and blogs created by me aling with my contact information.
