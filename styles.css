@@ -147,10 +147,6 @@ body {
   text-align: center;
 }
 
-.ow {
-  background-color: var(--off-white);
-}
-
 /** footers **/
 
 .footer {
@@ -212,4 +208,23 @@ body {
 .rotate {
   transform: rotate(180deg);
   display: inline-block;
+}
+
+.ow {
+  background-color: var(--off-white);
+}
+
+/* Off white color for every alternate block */
+ul.list-center div:nth-child(odd) {
+  background-color: var(--off-white);
+}
+
+/* For other project section, off white color for every alternate block */
+
+ul.list-center div#other-projects div:nth-child(odd) {
+  background-color: var(--off-white);
+}
+
+ul.list-center div#other-projects div:nth-child(even) {
+  background-color: white;
 }
