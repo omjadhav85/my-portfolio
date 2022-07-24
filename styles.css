@@ -32,6 +32,10 @@ body {
   margin: auto;
 }
 
+.section .container-center {
+  text-align: center;
+}
+
 /** links **/
 .link {
   box-sizing: border-box;
